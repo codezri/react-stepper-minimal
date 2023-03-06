@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.steps-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.step {
+  text-align: center;
+  flex: 1;
+  cursor: default;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.step .line {
+  height: 0px;
+  border-width: 1px;
+  border-style: solid;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% + 40px);
+  width: calc(100% - 85px);
+}
+
+.step .circle {
+  padding: 16px 20px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.step-active .circle {
+  background: #3d84f5;
+  color: #fff;
+}
+
+.step-done .circle {
+  background: #236ee8;
+  color: #eee;
+}
+
+.step-inactive .circle {
+  background: #bbb;
+  color: #000;
+}
+
+.step-active .label {
+  color: #000;
+}
+
+.step-done .label {
+  color: #222;
+}
+
+.step-inactive .label {
+  color: #888;
+}
+
+.step-done .line {
+  border-color: #3d84f5;
+}
+
+.step-inactive .line, .step-active .line {
+  border-color: #eee;
 }
