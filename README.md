@@ -1,6 +1,6 @@
 # react-stepper-minimal
 A minimal stepper component written in React.js
-<br/>
+<br/><br/>
 ![](./media/preview.gif)
 
 ## How to run this project?
